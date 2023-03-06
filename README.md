@@ -5,9 +5,6 @@ c. El agente robot de limpieza interactúa con otros agentes robot, de manera qu
 d. El entorno de la simulación son los cuartos limpios y sucios. <br>
 e. Los agentes son asignados en base al parámetro clean y la variable live, los cuales determinan si un agente va a ser un cuarto limpio (0), un cuarto sucio (1) o un robot de limpieza (2), al igual que guardar ese estado. Otra variable que determina el funcionamiento del sistema son los ids de los agentes, ya que son sus coordenadas. También está el parámetro que declara la cantidad de agentes robots que estarán en la simulación, los parámetros para las dimensiones del grid, un parámetro que determina el porcentaje de cuartos sucios y otro que determina el tiempo máximo de simulación. <br>
 f. Al inicio de la simulación el usuario ingresa las dimensiones que tendrá el grid, el porcentaje de celdas sucias, la cantidad de robots de limpiaza y el tiempo máximo de ejecución. Se inicializa el modelo con la cantidad de robots dada y los cuartos. Se revisa que el tiempo total de la simulación no haya llegado al tiempo máximo y que todavía hay cuartos sucios antes de realizar un step del modelo. Dentro del modelo, al inicializar los agentes, se agregan a una lista los que son robots de limpieza. En cada step los robots de limpieza escogen una coordenada "x" y "y" aleatoria de uno de sus vecinos para moverse a otro cuarto. Revisa que las coordenadas a las que se quiere mover no sean las mismas de otro robot de limpieza. En el caso de serlo, no se mueve. Si no son las coordenadas de otro robot, se quita el agente del grid y se coloca el agente robot. También se elimina el agente robot de su posición anterior y se coloca un cuarto limpio. <br>
-g. <br>
+g. Al final de la simulación se despliega una gráfica de la cantidad de cuartos sucios contra el tiempo total. El tiempo que se tarda en correr la simulación es menor cuando está la cantidad máxima de robots de limpieza en el grid.<br>
 h. [https://github.com/Maria-Ontiveros/Actividad-Integradora](https://github.com/Maria-Ontiveros/Actividad-Integradora)
-
-
-f. Describe el proceso de simulación
-g. Discute clara y concisamente los resultados obtenidos
+Liga al Collab: [https://colab.research.google.com/drive/1xTTaKVBKE1YjYvsJ5x4ZI-kM4hZAYzLt?usp=sharing](https://colab.research.google.com/drive/1xTTaKVBKE1YjYvsJ5x4ZI-kM4hZAYzLt?usp=sharing)
