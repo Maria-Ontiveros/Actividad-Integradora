@@ -3,16 +3,11 @@ a. La situación que se simula son robots de limpieza y cuartos que están limpi
 b. Los agentes son las celdas y pueden ser robots de limpieza, un cuarto limpio o un cuarto sucio. Los agentes robots realizan la acción de limpiar si están en un cuarto sucio y si están en un cuarto limpio, elijen un cuarto aleatorio entre sus vecinos y se mueven a ese. En el caso que un robot ya esté en ese cuarto, no se mueve. Las percepciones del agente robot son sus celdas vecinas. <br>
 c. El agente robot de limpieza interactúa con otros agentes robot, de manera que si el cuarto al que se va a mover tiene a otro robot de limpieza, el robot no se mueve. Si se mueve a un cuarto sucio, al moverse a otro cuarto el robot deja el cuarto limpio. <br>
 d. El entorno de la simulación son los cuartos limpios y sucios. <br>
-e. Los agentes son asignados en base al parámetro clean, el cual determina si va a ser un cuarto limpio (0), un cuarto sucio (1) o un robot de limpieza (2). Otra varaible <br>
-f. <br>
+e. Los agentes son asignados en base al parámetro clean y la variable live, los cuales determinan si un agente va a ser un cuarto limpio (0), un cuarto sucio (1) o un robot de limpieza (2), al igual que guardar ese estado. Otra variable que determina el funcionamiento del sistema son los ids de los agentes, ya que son sus coordenadas. También está el parámetro que declara la cantidad de agentes robots que estarán en la simulación, los parámetros para las dimensiones del grid, un parámetro que determina el porcentaje de cuartos sucios y otro que determina el tiempo máximo de simulación. <br>
+f. Al inicio de la simulación el usuario ingresa las dimensiones que tendrá el grid, el porcentaje de celdas sucias, la cantidad de robots de limpiaza y el tiempo máximo de ejecución. Se inicializa el modelo con la cantidad de robots dada y los cuartos. Se revisa que el tiempo total de la simulación no haya llegado al tiempo máximo y que todavía hay cuartos sucios antes de realizar un step del modelo. Dentro del modelo, al inicializar los agentes, se agregan a una lista los que son robots de limpieza. En cada step los robots de limpieza escogen una coordenada "x" y "y" aleatoria de uno de sus vecinos para moverse a otro cuarto. Revisa que las coordenadas a las que se quiere mover no sean las mismas de otro robot de limpieza. En el caso de serlo, no se mueve. Si no son las coordenadas de otro robot, se quita el agente del grid y se coloca el agente robot. También se elimina el agente robot de su posición anterior y se coloca un cuarto limpio. <br>
 g. <br>
 h. [https://github.com/Maria-Ontiveros/Actividad-Integradora](https://github.com/Maria-Ontiveros/Actividad-Integradora)
 
 
-c. Describe cómo interactúan y se comunican dos o más agentes del mismo 
-d. Describe el entorno
-e. Identifica  las  variables  y  los  parámetros  que  determinan  el  funcionamiento  del 
-sistema.
 f. Describe el proceso de simulación
 g. Discute clara y concisamente los resultados obtenidos
-h. Agrega el link al repositorio.
